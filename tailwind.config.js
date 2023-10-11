@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				mono: 'var(--mono)',
-				sans: 'var(--sans)',
-				serif: 'var(--serif)',
+				mono: 'IBM Plex Mono',
+				sans: 'Inter',
+				serif: 'DM Serif Text',
 			},
 		},
 	},

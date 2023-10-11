@@ -12,7 +12,7 @@ function SingleBlogPost({ post }: { post: Blogpost }) {
 		<motion.div variants={revealFromLeft} className='w-96 h-72 rounded-lg border border-white/40 overflow-hidden'>
 			<Link href={url}>
 				<div className='relative w-full h-4/6'>
-					<Image src={social_image} alt={title} fill className='object-cover' />
+					<Image src={social_image} alt={title} fill className='object-cover scale-110' />
 				</div>
 			</Link>
 
