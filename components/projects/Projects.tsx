@@ -4,7 +4,7 @@ import SectionTitle from '../SectionTitle'
 
 function Projects() {
 	return (
-		<section id='projects'>
+		<section id='projects' className='flex flex-col items-center overflow-hidden'>
 			<SectionTitle>projects</SectionTitle>
 			{projects.map((project, i) => (
 				<ProjectItem project={project} key={i} />

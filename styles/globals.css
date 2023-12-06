@@ -17,23 +17,6 @@
 		transition: all 0.2s ease-in-out;
 		opacity: 20%;
 	}
-
-	.project-btn {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 1rem;
-		margin: 1rem 2rem;
-		border-radius: 10px;
-		transition: 0.3s ease all;
-	}
-
-	.project-btn:hover {
-		background-color: #fff;
-		margin: 0.5rem 1rem;
-		padding: 0.5rem 1rem;
-		color: #000;
-	}
 }
 
 :root {
