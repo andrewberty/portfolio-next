@@ -8,6 +8,7 @@ function Header() {
 	return (
 		<header className='bg-[url("/assets/images/header.avif")] bg-no-repeat bg-center bg-cover h-screen flex relative transition-all duration-500 mb-20 mix-blend-screen'>
 			<div className='absolute w-[50%] h-full bg-gradient-to-r from-black to-transparent' />
+			<div className='absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black to-transparent' />
 			<RevealContainer className='flex flex-col max-w-[70vw] absolute left-[10%] top-[30%] space-y-4'>
 				<motion.p variants={revealFromLeft} className='text-3xl'>
 					Hello I am <span className='block font-serif text-6xl'>Andrew</span>
