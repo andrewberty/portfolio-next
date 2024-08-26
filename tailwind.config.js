@@ -1,13 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
+	content: ['./components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		extend: {
-			fontFamily: {
-				mono: 'IBM Plex Mono',
-				sans: 'Inter',
-				serif: 'DM Serif Text',
+			keyframes: {
+				'border-spin': {
+					'100%': {
+						transform: 'rotate(-360deg)',
+					},
+				},
 			},
+			animation: {
+				'border-spin': 'border-spin 7s linear infinite',
+			},
+		},
+		fontFamily: {
+			sans: ['var(--font-geist-sans)'],
+			mono: ['var(--font-geist-mono)'],
+			serif: 'var(--font-dmserif)',
 		},
 	},
 	plugins: [],

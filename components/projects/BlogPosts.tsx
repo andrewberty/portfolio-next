@@ -1,3 +1,4 @@
+'use client'
 import { Blogpost } from '@/types'
 import { useEffect, useState } from 'react'
 import { SingleBlogPost } from '..'

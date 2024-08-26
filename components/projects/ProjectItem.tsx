@@ -1,3 +1,5 @@
+'use client'
+
 import { logos } from '@/data'
 import { Project } from '@/types'
 import { motion } from 'framer-motion'
