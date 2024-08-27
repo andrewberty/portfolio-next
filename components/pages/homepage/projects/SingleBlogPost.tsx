@@ -5,14 +5,14 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { revealFromLeft } from '../reveal/revealVariations'
+import { revealFromLeft } from '@/src/utils/reveal/revealVariations'
 
 function SingleBlogPost({ post }: { post: Blogpost }) {
 	const { social_image, url, reading_time_minutes, tag_list, title } = post
 
 	return (
 		<motion.div variants={revealFromLeft} className='w-96 h-72 rounded-lg border border-white/40 overflow-hidden'>
-			<Link href={url}>
+			<Link href={url} target='_blank' rel='noopener noreferrer'>
 				<div className='relative w-full h-4/6'>
 					<Image src={social_image} alt={title} fill className='object-cover scale-110' />
 				</div>

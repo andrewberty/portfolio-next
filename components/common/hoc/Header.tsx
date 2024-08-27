@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import RevealContainer from './reveal/RevealContainer'
-import { revealFromLeft } from './reveal/revealVariations'
+import RevealContainer from '@/src/utils/reveal/RevealContainer'
+import { revealFromLeft } from '@/src/utils/reveal/revealVariations'
 
 function Header() {
 	return (

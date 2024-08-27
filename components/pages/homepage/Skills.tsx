@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { skills } from '../data'
-import SectionTitle from './SectionTitle'
-import RevealContainer from './reveal/RevealContainer'
-import { revealFromBottom } from './reveal/revealVariations'
+import { skills } from '../../../data'
+import SectionTitle from '../../common/SectionTitle'
+import RevealContainer from '@/src/utils/reveal/RevealContainer'
+import { revealFromBottom } from '@/src/utils/reveal/revealVariations'
 
 function Skills() {
 	return (

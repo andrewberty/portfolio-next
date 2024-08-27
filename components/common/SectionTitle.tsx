@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import React from 'react'
-import RevealContainer from './reveal/RevealContainer'
-import { revealFromTop } from './reveal/revealVariations'
+import RevealContainer from '@/src/utils/reveal/RevealContainer'
+import { revealFromTop } from '@/src/utils/reveal/revealVariations'
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
 	return (

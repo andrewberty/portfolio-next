@@ -3,8 +3,8 @@
 import { logos } from '@/data'
 import { Project } from '@/types'
 import { motion } from 'framer-motion'
-import RevealContainer from '../reveal/RevealContainer'
-import { revealFromLeft, revealFromRight } from '../reveal/revealVariations'
+import RevealContainer from '@/src/utils/reveal/RevealContainer'
+import { revealFromLeft, revealFromRight } from '@/src/utils/reveal/revealVariations'
 import Demo from './Demo'
 import ProjectButtons from './ProjectButtons'
 

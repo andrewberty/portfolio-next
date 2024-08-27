@@ -1,8 +1,8 @@
 'use client'
 import { Blogpost } from '@/types'
 import { useEffect, useState } from 'react'
-import { SingleBlogPost } from '..'
-import RevealContainer from '../reveal/RevealContainer'
+import RevealContainer from '@/src/utils/reveal/RevealContainer'
+import SingleBlogPost from './SingleBlogPost'
 
 function BlogPosts() {
 	const [blogposts, setBlogposts] = useState([])

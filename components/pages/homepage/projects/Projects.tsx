@@ -1,6 +1,7 @@
-import { BlogPosts, ProjectItem } from '..'
-import { extensions, projects } from '../../data'
-import SectionTitle from '../SectionTitle'
+import { extensions, projects } from '../../../../data'
+import BlogPosts from './BlogPosts'
+import ProjectItem from './ProjectItem'
+import SectionTitle from '../../../common/SectionTitle'
 
 function Projects() {
 	return (
