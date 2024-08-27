@@ -28,7 +28,7 @@ export const container = (staggerDuration = 0.5) => {
 	}
 }
 
-export const xAnimation = xValue => {
+export function xAnimation(xValue: { xValue: Number }) {
 	return {
 		hidden: {
 			x: xValue,
@@ -44,7 +44,7 @@ export const xAnimation = xValue => {
 	}
 }
 
-export const LeftAnimation = leftValue => {
+export function LeftAnimation(leftValue: { leftValue: Number }) {
 	return {
 		hidden: {
 			left: leftValue,
@@ -60,7 +60,7 @@ export const LeftAnimation = leftValue => {
 	}
 }
 
-export const yAnimation = yValue => {
+export function yAnimation(yValue: { yValue: Number }) {
 	return {
 		hidden: {
 			y: yValue,
@@ -76,7 +76,7 @@ export const yAnimation = yValue => {
 	}
 }
 
-export const xPositionAnimation = xValue => {
+export function xPositionAnimation(xValue: { xValue: Number }) {
 	return {
 		hidden: {
 			end: xValue,
