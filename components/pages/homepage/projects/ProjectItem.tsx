@@ -12,12 +12,12 @@ function ProjectItem({ project }: { project: Project }) {
 	const { title, description, demo, repoLink, liveLink, marketplace, techs } = project
 
 	return (
-		<RevealContainer className='flex flex-col justify-center items-center h-full w-4/5 mx-auto my-40'>
-			<div className='flex flex-col justify-center items-center gap-8'>
-				<motion.p variants={revealFromLeft} className='text-6xl text-center font-serif'>
+		<RevealContainer className='flex flex-col justify-center items-center w-4/5 mx-auto my-40'>
+			<div className='flex flex-col justify-center items-center gap-6'>
+				<motion.p variants={revealFromLeft} className='text-5xl text-center font-serif'>
 					{title}
 				</motion.p>
-				<motion.p variants={revealFromLeft} className='text-xl text-center'>
+				<motion.p variants={revealFromLeft} className='text-lg text-center'>
 					{description}
 				</motion.p>
 
