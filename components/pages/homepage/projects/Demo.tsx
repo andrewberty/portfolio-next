@@ -12,7 +12,7 @@ function Demo({ demo, title }: Props) {
 	return (
 		<motion.div
 			variants={revealFromBottom}
-			className='relative w-4/5 h-[30vh]  md:h-[40rem] before:back-gradient before:hover:opacity-30'>
+			className='relative w-4/5 h-[30vh] md:h-[40rem] before:back-gradient before:hover:opacity-15'>
 			<Image src={demo} alt={title} fill className='object-contain' />
 		</motion.div>
 	)

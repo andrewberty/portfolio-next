@@ -4,14 +4,15 @@
 
 @layer components {
 	.back-gradient {
-		background: linear-gradient(90deg, #c41c76 0%, #4f0c97);
+		background: linear-gradient(90deg, #fb923c 0%, #fb5822);
+		/* background: linear-gradient(90deg, #c41c76 0%, #4f0c97); */
 		height: 100%;
 		width: 100%;
 		z-index: -1;
 		position: absolute;
 		filter: blur(100px);
 		transition: all 0.2s ease-in-out;
-		opacity: 20%;
+		opacity: 10%;
 	}
 }
 
