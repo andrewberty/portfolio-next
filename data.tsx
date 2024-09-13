@@ -54,7 +54,6 @@ export const projects = [
 		techs: ['next', 'tailwind'],
 		repoLink: 'https://github.com/andrew-george/portfolio',
 		demo: `${publicAssetsPath}/portfolio-mockup.png`,
-		liveLink: 'https://andrewberty.vercel.app/',
 	},
 	{
 		title: 'Margin',
