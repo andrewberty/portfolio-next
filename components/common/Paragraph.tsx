@@ -2,17 +2,6 @@ import { cn } from '@/src/utils/cn'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useRef, useState } from 'react'
 
-// function joinWordsFromArray(words: string[], number = 5) {
-// 	let result: string[] = []
-//
-// 	words.forEach((_, i) => {
-// 		if (i % number === 0) {
-// 			result.push(words.slice(i, i + number).join(' '))
-// 		}
-// 	})
-// 	return result
-// }
-
 export default function Paragraph({ children, className }: { children: string; className?: string }) {
 	const [wordsIndex, setwordsIndex] = useState(0)
 	const target = useRef(null)
@@ -39,7 +28,9 @@ export default function Paragraph({ children, className }: { children: string; c
 							opacity:
 								index + 1 <= wordsIndex && index + 4 >= wordsIndex ? 1 : (scrollYProgress.get() / words.length) * 20,
 						}}
-						className='mr-2 text-orange-400 text-center'>
+						className={cn('mr-2 text-orange-400 text-center font-thin', {
+							'font-medium': index + 1 <= wordsIndex && index + 4 >= wordsIndex,
+						})}>
 						{word}
 					</motion.span>
 				))}
