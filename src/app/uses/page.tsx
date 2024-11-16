@@ -1,4 +1,4 @@
-import Uses from '@/components/pages/uses/Uses'
+import Uses from '@/src/components/pages/uses/Uses'
 
 function UsesPage() {
 	return <Uses />

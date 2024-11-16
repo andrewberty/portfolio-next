@@ -1,12 +1,13 @@
-import Footer from '@/components/common/hoc/footer/Footer'
-import Header from '@/components/pages/homepage/Header'
-import Projects from '@/components/pages/homepage/projects/Projects'
-import Skills from '@/components/pages/homepage/Skills'
+'use client'
+import Footer from '@/src/components/common/hoc/footer/Footer'
+import Landing from '@/src/components/pages/homepage/Landing'
+import Projects from '@/src/components/pages/homepage/projects/Projects'
+import Skills from '@/src/components/pages/homepage/Skills'
 
 export default function Home() {
 	return (
 		<>
-			<Header />
+			<Landing />
 			<Projects />
 			<Skills />
 			<Footer />

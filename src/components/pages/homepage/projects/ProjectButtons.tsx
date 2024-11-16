@@ -3,7 +3,7 @@
 import { motion } from 'motion/react'
 import { FaGithub, FaLink } from 'react-icons/fa'
 import { revealFromRight } from '@/src/utils/reveal/revealVariations'
-import Button from '@/components/common/Button'
+import Button from '@/src/components/common/Button'
 
 function ProjectButtons({
 	repoLink,

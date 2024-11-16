@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import { skills } from '../../../data'
+import { skills } from '../../../../data'
 import SectionTitle from '../../common/SectionTitle'
 import RevealContainer from '@/src/utils/reveal/RevealContainer'
 import { revealFromBottom } from '@/src/utils/reveal/revealVariations'

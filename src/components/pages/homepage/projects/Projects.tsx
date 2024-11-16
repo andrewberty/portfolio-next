@@ -1,4 +1,4 @@
-import { extensions, projects } from '../../../../data'
+import { extensions, projects } from '../../../../../data'
 import BlogPosts from './BlogPosts'
 import ProjectItem from './ProjectItem'
 import SectionTitle from '../../../common/SectionTitle'
