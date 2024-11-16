@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { FaAt, FaGithub, FaLinkedin } from 'react-icons/fa'
 import SectionTitle from '../../SectionTitle'
 import RevealContainer from '@/src/utils/reveal/RevealContainer'

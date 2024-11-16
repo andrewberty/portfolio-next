@@ -1,5 +1,5 @@
 import { cn } from '@/src/utils/cn'
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
+import { motion, useMotionValueEvent, useScroll } from 'motion/react'
 import { useRef, useState } from 'react'
 
 export default function Paragraph({ children, className }: { children: string; className?: string }) {
