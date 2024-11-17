@@ -33,7 +33,7 @@ export default function Paragraph({ children, className }: { children: string; c
 									: (scrollYProgress.get() / words.length) * 20,
 							filter: index + 1 <= wordsIndex && index + wordsAtOnce >= wordsIndex ? 'blur(0px)' : 'blur(5px)',
 						}}
-						className={cn('mr-3 text-orange-400 text-center font-thin', {
+						className={cn('mr-3 text-orange-500 text-center font-thin', {
 							'font-medium': index + 1 <= wordsIndex && index + wordsAtOnce >= wordsIndex,
 						})}>
 						{word}
