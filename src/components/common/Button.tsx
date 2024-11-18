@@ -12,7 +12,7 @@ function BasicButton({ children }: { children: React.ReactNode }) {
 export default function Button({ children, link }: { children: React.ReactNode; link?: string }) {
 	if (link) {
 		return (
-			<Link href={link}>
+			<Link href={link} target='_blank'>
 				<BasicButton>{children}</BasicButton>
 			</Link>
 		)

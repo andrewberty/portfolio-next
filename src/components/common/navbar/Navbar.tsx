@@ -22,7 +22,7 @@ function Navbar() {
 			<Logo />
 			{links.map((link, i) => {
 				return (
-					<a key={i} href={link.url} className='capitalize transition-opacity opacity-80 hover:opacity-100'>
+					<a key={i} href={`#${link.url}`} className='capitalize transition-opacity opacity-80 hover:opacity-100'>
 						{link.title}
 					</a>
 				)

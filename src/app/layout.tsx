@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			</head>
 			<body>
 				<div className='grain pointer-events-none' />
-				<Navbar />
+				{/* <Navbar /> */}
 				{children}
 			</body>
 		</html>
