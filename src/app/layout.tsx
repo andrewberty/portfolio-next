@@ -1,7 +1,6 @@
 import './globals.css'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import Navbar from '@/src/components/common/navbar/Navbar'
 
 export async function generateMetadata() {
 	return {
