@@ -20,9 +20,7 @@ function Landing() {
 	const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
 
 	return (
-		<motion.header
-			ref={target}
-			className='h-[300dvh] flex relative mb-20 mix-blend-screen overflow-clip justify-center'>
+		<motion.header ref={target} className='h-[300vh] flex relative mb-20 mix-blend-screen overflow-clip justify-center'>
 			<motion.div style={{ rotate: imageRotate, opacity }}>
 				<Image
 					src={HeaderImage}
