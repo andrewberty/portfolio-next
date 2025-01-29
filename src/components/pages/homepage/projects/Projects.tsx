@@ -1,12 +1,12 @@
 import BlogPosts from './BlogPosts'
-import SectionTitle from '../../../common/SectionTitle'
-import { logos, extensions, projects } from '@/data'
+import { extensions, projects } from '@/src/data/data'
 import { Project } from '@/types'
 import { motion, useScroll, useTransform } from 'motion/react'
 import ProjectButtons from './ProjectButtons'
 import { cn } from '@/src/utils/cn'
 import Image from 'next/image'
 import useDeviceSize from '@/src/utils/hooks/useDeviceSize'
+import SectionTitle from '@/src/components/common/SectionTitle'
 
 function Projects() {
 	const { width } = useDeviceSize()
@@ -61,10 +61,8 @@ function ProjectItem({ project, className }: { project: Project; className?: str
 				<motion.p className='lg:text-lg text-sm text-center'>{description}</motion.p>
 
 				<div className='flex justify-center items-center gap-10'>
-					{techs.map((tech, i) => (
-						<motion.span key={i} className='text-4xl'>
-							{logos[`${tech}`]}
-						</motion.span>
+					{techs.map((Tech, i) => (
+						<Tech key={i} size={40} />
 					))}
 				</div>
 
