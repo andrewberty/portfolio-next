@@ -2,12 +2,12 @@
 
 import { motion } from 'motion/react'
 import { FaAt, FaGithub, FaLinkedin } from 'react-icons/fa'
-import SectionTitle from '../../SectionTitle'
 import RevealContainer from '@/src/utils/reveal/RevealContainer'
 import { revealFromBottom } from '@/src/utils/reveal/revealVariations'
 import Link from 'next/link'
 import { FaArrowUp } from 'react-icons/fa'
-import Logo from '../../Logo'
+import SectionTitle from '@/src/components/common/SectionTitle'
+import Logo from '@/src/components/common/Logo'
 
 const contact = [
 	{

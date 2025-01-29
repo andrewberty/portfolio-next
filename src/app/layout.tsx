@@ -1,6 +1,7 @@
 import './globals.css'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import ProgressBar from '@/src/components/common/ProgressBar'
 
 export async function generateMetadata() {
 	return {
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body>
 				<div className='grain pointer-events-none' />
 				{/* <Navbar /> */}
+				<ProgressBar />
 				{children}
 			</body>
 		</html>

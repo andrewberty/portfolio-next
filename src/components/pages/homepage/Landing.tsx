@@ -25,6 +25,7 @@ function Landing() {
 				<Image
 					src={HeaderImage}
 					alt='header image'
+					priority
 					className='sticky top-0 h-screen object-cover opacity-50 pointer-events-none'
 				/>
 			</motion.div>

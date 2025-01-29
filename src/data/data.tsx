@@ -1,64 +1,56 @@
-import { FaBootstrap, FaCss3Alt, FaHtml5, FaJsSquare, FaNodeJs, FaReact, FaSass } from 'react-icons/fa'
+import Icons from '@/src/data/tech-logos'
+import { FaCss3Alt, FaNodeJs, FaReact, FaSass } from 'react-icons/fa'
 import { SiNextdotjs, SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { VscJson } from 'react-icons/vsc'
 
 const publicAssetsPath = '/assets/images/projects'
 
 export const skills = [
-	'/assets/images/tech-logos/html.svg',
-	'/assets/images/tech-logos/css.svg',
-	'/assets/images/tech-logos/sass.svg',
-	'/assets/images/tech-logos/bootstrap.svg',
-	'/assets/images/tech-logos/tailwind.svg',
-	'/assets/images/tech-logos/javascript.svg',
-	'/assets/images/tech-logos/typescript.svg',
-	'/assets/images/tech-logos/react.svg',
-	'/assets/images/tech-logos/nextjs.svg',
-	'/assets/images/tech-logos/cypress.svg',
-	'/assets/images/tech-logos/git.svg',
-	'/assets/images/tech-logos/github.svg',
-	'/assets/images/tech-logos/netlify.svg',
-	'/assets/images/tech-logos/parcel.svg',
-	'/assets/images/tech-logos/vercel.svg',
-	'/assets/images/tech-logos/figma.svg',
-	'/assets/images/tech-logos/xd.svg',
-	'/assets/images/tech-logos/nodejs.svg',
-	'/assets/images/tech-logos/expressjs.svg',
-	'/assets/images/tech-logos/mongodb.svg',
+	{
+		category: 'Frontend',
+		skills: [
+			Icons.HTMLIcon,
+			Icons.CSSIcon,
+			Icons.SassIcon,
+			Icons.BootstrapIcon,
+			Icons.TailwindIcon,
+			Icons.JavaScriptIcon,
+			Icons.TypeScriptIcon,
+			Icons.ReactIcon,
+			Icons.NextJsIcon,
+		],
+	},
+	{
+		category: 'Testing',
+		skills: [Icons.CypressIcon],
+	},
+	{
+		category: 'Backend',
+		skills: [Icons.NodeIcon, Icons.ExpressIcon, Icons.MongoIcon],
+	},
+	{
+		category: 'Dev Tools',
+		skills: [Icons.GitIcon, Icons.GithubIcon, Icons.NetlifyIcon, Icons.ParcelIcon, Icons.VercelIcon],
+	},
+	{
+		category: 'UI/UX',
+		skills: [Icons.FigmaIcon, Icons.XDIcon],
+	},
 ]
-
-interface Logos {
-	[key: string]: JSX.Element
-}
-
-export const logos: Logos = {
-	html: <FaHtml5 />,
-	css: <FaCss3Alt />,
-	sass: <FaSass />,
-	javascript: <FaJsSquare />,
-	nodejs: <FaNodeJs />,
-	json: <VscJson />,
-	bootstrap: <FaBootstrap />,
-	react: <FaReact />,
-	next: <SiNextdotjs />,
-	typescript: <SiTypescript />,
-	styledComponents: <SiStyledcomponents />,
-	tailwind: <SiTailwindcss />,
-}
 
 export const projects = [
 	{
 		title: 'Personal Portfolio',
 		description:
 			'Responsively designed portfolio to include all my projects and represent my technical skills and aesthetic',
-		techs: ['next', 'tailwind'],
+		techs: [SiNextdotjs, SiTailwindcss],
 		repoLink: 'https://github.com/andrewberty/portfolio-next',
 		demo: `${publicAssetsPath}/portfolio.webp`,
 	},
 	{
 		title: 'Margin',
 		description: 'Minimal note taking app to minimize distractions while taking notes',
-		techs: ['sass', 'react'],
+		techs: [FaSass, FaReact],
 		repoLink: 'https://github.com/andrewberty/margin-app-v2.0',
 		demo: `${publicAssetsPath}/margin.webp`,
 		liveLink: 'https://imargin.vercel.app/',
@@ -66,7 +58,7 @@ export const projects = [
 	{
 		title: 'O Fortuna',
 		description: 'O Fortuna is a placeholder text generator with latin flavor',
-		techs: ['sass', 'react'],
+		techs: [FaSass, FaReact],
 		repoLink: 'https://github.com/andrewberty/O-Fortuna',
 		demo: `${publicAssetsPath}/fortuna.webp`,
 		liveLink: 'https://o-fortuna.vercel.app/',
@@ -74,7 +66,7 @@ export const projects = [
 	{
 		title: 'Die Zeitung',
 		description: 'Modern designed blog to share stories and experiences',
-		techs: ['typescript', 'next', 'styledComponents'],
+		techs: [SiTypescript, SiNextdotjs, SiStyledcomponents],
 		repoLink: 'https://github.com/andrewberty/die-zeitung-blog',
 		demo: `${publicAssetsPath}/zeitung.webp`,
 		liveLink: 'https://die-zeitung-blog.vercel.app/',
@@ -82,7 +74,7 @@ export const projects = [
 	{
 		title: 'Palette',
 		description: 'An interactive color mixer and palette generator',
-		techs: ['typescript', 'next', 'css'],
+		techs: [SiTypescript, SiNextdotjs, FaCss3Alt],
 		repoLink: 'https://github.com/andrewberty/palette',
 		demo: `${publicAssetsPath}/palette.webp`,
 		liveLink: 'https://palette-app.vercel.app/',
@@ -93,7 +85,7 @@ export const extensions = [
 	{
 		title: 'Fontsy',
 		description: 'A simple extension to control editor and terminal font sizes, weight and ligatures',
-		techs: ['nodejs'],
+		techs: [FaNodeJs],
 		repoLink: 'https://github.com/andrew-george/fontsy-vscode-extension',
 		demo: `${publicAssetsPath}/fontsy-demo.png`,
 		marketplace: 'https://marketplace.visualstudio.com/items?itemName=andrewberty.fontsy',
@@ -101,7 +93,7 @@ export const extensions = [
 	{
 		title: 'Noir Themes',
 		description: 'Collection of refined popular themes, just darker or cleaner.',
-		techs: ['json'],
+		techs: [VscJson],
 		repoLink: 'https://github.com/andrew-george/Noir-vscode-theme',
 		demo: `${publicAssetsPath}/noir-demo.png`,
 		marketplace: 'https://marketplace.visualstudio.com/items?itemName=andrewberty.noir-theme-bundle',

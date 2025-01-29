@@ -1,4 +1,4 @@
-import Logo from '../Logo'
+import Logo from '@/src/components/common/Logo'
 import './Navbar.css'
 
 const links = [
