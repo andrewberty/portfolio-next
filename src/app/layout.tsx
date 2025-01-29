@@ -2,6 +2,7 @@ import './globals.css'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import ProgressBar from '@/src/components/common/ProgressBar'
+import ReactLenis from 'lenis/react'
 
 export async function generateMetadata() {
 	return {
@@ -50,10 +51,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<meta name='theme-color' content='#ffffff' />
 			</head>
 			<body>
-				<div className='grain pointer-events-none' />
-				{/* <Navbar /> */}
-				<ProgressBar />
-				{children}
+				<ReactLenis root>
+					<div className='grain pointer-events-none' />
+					{/* <Navbar /> */}
+					<ProgressBar />
+					{children}
+				</ReactLenis>
 			</body>
 		</html>
 	)
