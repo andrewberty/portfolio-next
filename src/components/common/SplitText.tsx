@@ -35,7 +35,7 @@ export default function SplitText({ children, className }: { children: string; c
 					scrub: true,
 				},
 			})
-			.to('header', { rotate: -20, filter: 'blur(20px)', opacity: 0, scale: 0.2 })
+			.to('header', { rotate: -20, filter: 'blur(12px)', opacity: 0, scale: 0.2 })
 	})
 
 	const words = children.split(' ')
@@ -44,19 +44,20 @@ export default function SplitText({ children, className }: { children: string; c
 		<div
 			className={cn('md:w-[60%] w-[90%] mx-auto text-[2.2vh] md:text-4xl justify-center mt-[40vh] h-fit', className)}>
 			<div className='flex flex-wrap justify-center items-center'>
-				{words.map((word, index) => (
-					<span
-						key={index}
-						className={cn(
-							'word-span',
-							'mr-3 text-orange-500 text-center font-thin blur-sm transition-[filter] duration-500',
-							{
-								'font-medium blur-0': index + 1 <= wordsIndex && index + wordsAtOnce >= wordsIndex,
-							},
-						)}>
-						{word}
-					</span>
-				))}
+				{words.map((word, index) => {
+					const isActiveSplit = index + 1 <= wordsIndex && index + wordsAtOnce >= wordsIndex
+
+					return (
+						<span
+							key={index}
+							className={cn('word-span', 'mr-3 text-orange-500 text-center transition-[filter] duration-500', {
+								'font-thin blur-md': !isActiveSplit,
+								'font-medium blur-0': isActiveSplit,
+							})}>
+							{word}
+						</span>
+					)
+				})}
 			</div>
 		</div>
 	)
