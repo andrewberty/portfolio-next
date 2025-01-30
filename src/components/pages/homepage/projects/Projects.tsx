@@ -1,40 +1,53 @@
 import BlogPosts from './BlogPosts'
 import { extensions, projects } from '@/src/data/data'
 import { Project } from '@/types'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion } from 'motion/react'
 import ProjectButtons from './ProjectButtons'
 import { cn } from '@/src/utils/cn'
 import Image from 'next/image'
-import useDeviceSize from '@/src/utils/hooks/useDeviceSize'
 import SectionTitle from '@/src/components/common/SectionTitle'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 function Projects() {
-	const { width } = useDeviceSize()
-	const isDesktop = width >= 1024
+	useGSAP(() => {
+		const projects = gsap.utils.toArray('.project')
 
-	const { scrollYProgress } = useScroll({
-		offset: ['start -250%', `end ${isDesktop ? '350%' : '525vh'}`],
+		gsap.to(projects, {
+			xPercent: -100 * (projects.length - 1),
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '.projects-container',
+				pin: true,
+				end: '+=2000',
+				pinSpacing: true,
+				scrub: true,
+			},
+		})
+
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.projects-container',
+				start: 'clamp(top 170%)',
+				end: 'clamp(bottom bottom)',
+				scrub: true,
+			},
+		})
+
+		tl.fromTo('.title', { scale: 20, opacity: 1, rotate: 10 }, { scale: 2, opacity: 0.3, rotate: 0 })
 	})
-
-	const x = useTransform(scrollYProgress, [0, 1], ['100%', '-100%'])
-
-	const DesktopScale = useTransform(scrollYProgress, [0.1, 0.25, 0.75, 1], [40, 8, 8, 50])
-	const MobileScale = useTransform(scrollYProgress, [0.1, 0.25, 0.75, 1], [20, 1.6, 1.6, 50])
-	const scale = isDesktop ? DesktopScale : MobileScale
-
-	const opacity = useTransform(scrollYProgress, [0.1, 0.25, 0.75, 1], [0.8, 0.1, 0.1, 0.8])
-	const color = useTransform(scrollYProgress, [0.3, 0.5], ['#f97316', '#ffffff'])
 
 	return (
 		<section className='flex flex-col items-center'>
-			<div className='h-[500vh] relative pt-[20vh]'>
-				<div className='flex flex-col gap-[4%] h-[100vh] sticky top-2 lg:top-32'>
-					<SectionTitle style={{ scale, color, opacity }}>projects</SectionTitle>
-					<motion.div className='flex items-center h-full lg:h-auto will-change-transform' style={{ x }}>
-						{projects.map((project, i) => (
-							<ProjectItem project={project} key={i} className='shrink-0 w-screen' />
-						))}
-					</motion.div>
+			<div className='relative flex flex-col gap-[4%] justify-center projects-container w-screen h-screen'>
+				<SectionTitle className='title absolute top-2 left-1/2 -translate-x-1/2'>projects</SectionTitle>
+				<div className='flex'>
+					{projects.map((project, i) => (
+						<ProjectItem project={project} key={i} className='shrink-0 w-screen project' />
+					))}
 				</div>
 			</div>
 
@@ -68,7 +81,7 @@ function ProjectItem({ project, className }: { project: Project; className?: str
 
 				<ProjectButtons repoLink={repoLink} liveLink={liveLink} marketplace={marketplace} />
 			</div>
-			<motion.div className='relative w-screen lg:w-[50vw] aspect-[3/2] lg:before:back-gradient lg:before:hover:opacity-15'>
+			<motion.div className='relative w-[90vw] lg:w-[50vw] aspect-[3/2] lg:before:back-gradient lg:before:hover:opacity-15'>
 				<Image src={demo} alt={title} fill className='object-contain py-6 lg:py-12' />
 			</motion.div>
 		</div>

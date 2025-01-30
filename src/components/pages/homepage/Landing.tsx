@@ -20,7 +20,12 @@ function Landing() {
 
 	useGSAP(
 		() => {
-			gsap.to(headerRef.current, { opacity: 1, filter: 'blur(0px)', duration: 1.5, ease: 'power3.inOut' })
+			gsap.to(headerRef.current, {
+				opacity: 1,
+				filter: 'blur(0px)',
+				clipPath: 'circle(100%)',
+				duration: 3,
+			})
 
 			gsap
 				.timeline({

@@ -1,24 +1,23 @@
 'use client'
 
 import { cn } from '@/src/utils/cn'
-import { motion, HTMLMotionProps } from 'motion/react'
 import React from 'react'
 
-type SectionTitleProps = HTMLMotionProps<'h2'> & {
+type SectionTitleProps = {
 	children: React.ReactNode
 	className?: string
 }
 
 function SectionTitle({ children, className, ...rest }: SectionTitleProps) {
 	return (
-		<motion.h2
+		<h2
 			className={cn(
-				'font-sans w-fit mx-auto text-5xl font-extrabold tracking-tighter uppercase text-center',
+				'font-sans text-orange-500 w-fit mx-auto text-[10vw] lg:text-[5vw] font-extrabold tracking-tighter uppercase text-center',
 				className,
 			)}
 			{...rest}>
 			{children}
-		</motion.h2>
+		</h2>
 	)
 }
 
