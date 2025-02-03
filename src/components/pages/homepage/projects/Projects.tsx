@@ -43,21 +43,23 @@ function Projects() {
 	return (
 		<section className='flex flex-col items-center'>
 			<div className='relative flex flex-col gap-[4%] justify-center projects-container w-screen h-screen'>
-				<SectionTitle className='title absolute top-2 left-1/2 -translate-x-1/2'>projects</SectionTitle>
-				<div className='flex'>
+				<SectionTitle className='title z-20 mix-blend-difference absolute top-2 left-1/2 -translate-x-1/2'>
+					projects
+				</SectionTitle>
+				<div className='flex z-10'>
 					{projects.map((project, i) => (
 						<ProjectItem project={project} key={i} className='shrink-0 w-screen project' />
 					))}
 				</div>
 			</div>
 
-			<SectionTitle>vs code extensions</SectionTitle>
-			{extensions.map((extension, i) => (
-				<ProjectItem project={extension} key={i} />
-			))}
-
-			<SectionTitle>blog posts</SectionTitle>
-			<BlogPosts />
+			{/* <SectionTitle>OSS Contributions</SectionTitle> */}
+			{/* {extensions.map((extension, i) => ( */}
+			{/* 	<ProjectItem project={extension} key={i} /> */}
+			{/* ))} */}
+			{/**/}
+			{/* <SectionTitle>blog posts</SectionTitle> */}
+			{/* <BlogPosts /> */}
 		</section>
 	)
 }
