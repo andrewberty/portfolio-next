@@ -9,7 +9,7 @@ export default function Home() {
 		<div className='relative overflow-clip'>
 			<Landing />
 			<Projects />
-			{/* <Skills /> */}
+			<Skills />
 			<Footer />
 		</div>
 	)
