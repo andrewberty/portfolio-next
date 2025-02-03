@@ -8,16 +8,23 @@ import GithubIcon from '@/public/assets/images/tech-logos/github.svg'
 import HTMLIcon from '@/public/assets/images/tech-logos/html.svg'
 import JavaScriptIcon from '@/public/assets/images/tech-logos/javascript.svg'
 import MongoIcon from '@/public/assets/images/tech-logos/mongodb.svg'
-import NetlifyIcon from '@/public/assets/images/tech-logos/netlify.svg'
 import NextJsIcon from '@/public/assets/images/tech-logos/nextjs.svg'
 import NodeIcon from '@/public/assets/images/tech-logos/nodejs.svg'
-import ParcelIcon from '@/public/assets/images/tech-logos/parcel.svg'
 import ReactIcon from '@/public/assets/images/tech-logos/react.svg'
 import SassIcon from '@/public/assets/images/tech-logos/sass.svg'
 import TailwindIcon from '@/public/assets/images/tech-logos/tailwind.svg'
 import TypeScriptIcon from '@/public/assets/images/tech-logos/typescript.svg'
 import VercelIcon from '@/public/assets/images/tech-logos/vercel.svg'
 import XDIcon from '@/public/assets/images/tech-logos/xd.svg'
+import SupabaseIcon from '@/public/assets/images/tech-logos/supabase.svg'
+import FirebaseIcon from '@/public/assets/images/tech-logos/firebase.svg'
+import ClerkIcon from '@/public/assets/images/tech-logos/clerk.svg'
+import SanityIcon from '@/public/assets/images/tech-logos/sanity.svg'
+import StyledComponentsIcon from '@/public/assets/images/tech-logos/styled-components.svg'
+import ShadcnIcon from '@/public/assets/images/tech-logos/shadcn.svg'
+import MotionIcon from '@/public/assets/images/tech-logos/motion.svg'
+import GitlabIcon from '@/public/assets/images/tech-logos/gitlab.svg'
+import GsapIcon from '@/public/assets/images/tech-logos/gsap.svg'
 
 const Icons = {
 	HTMLIcon,
@@ -36,10 +43,17 @@ const Icons = {
 	VercelIcon,
 	GitIcon,
 	GithubIcon,
-	NetlifyIcon,
-	ParcelIcon,
+	SupabaseIcon,
 	FigmaIcon,
 	XDIcon,
+	FirebaseIcon,
+	ClerkIcon,
+	SanityIcon,
+	StyledComponentsIcon,
+	ShadcnIcon,
+	MotionIcon,
+	GitlabIcon,
+	GsapIcon,
 }
 
 export default Icons

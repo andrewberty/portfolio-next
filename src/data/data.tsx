@@ -1,4 +1,5 @@
 import Icons from '@/src/data/tech-logos'
+import { Project } from '@/types'
 import { FaCss3Alt, FaNodeJs, FaReact, FaSass } from 'react-icons/fa'
 import { SiNextdotjs, SiStyledcomponents, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { VscJson } from 'react-icons/vsc'
@@ -12,12 +13,16 @@ export const skills = [
 			Icons.HTMLIcon,
 			Icons.CSSIcon,
 			Icons.SassIcon,
+			Icons.StyledComponentsIcon,
 			Icons.BootstrapIcon,
 			Icons.TailwindIcon,
 			Icons.JavaScriptIcon,
 			Icons.TypeScriptIcon,
+			Icons.ShadcnIcon,
 			Icons.ReactIcon,
 			Icons.NextJsIcon,
+			Icons.MotionIcon,
+			Icons.GsapIcon,
 		],
 	},
 	{
@@ -26,11 +31,19 @@ export const skills = [
 	},
 	{
 		category: 'Backend',
-		skills: [Icons.NodeIcon, Icons.ExpressIcon, Icons.MongoIcon],
+		skills: [
+			Icons.NodeIcon,
+			Icons.MongoIcon,
+			Icons.ExpressIcon,
+			Icons.SupabaseIcon,
+			Icons.FirebaseIcon,
+			Icons.ClerkIcon,
+			Icons.SanityIcon,
+		],
 	},
 	{
 		category: 'Dev Tools',
-		skills: [Icons.GitIcon, Icons.GithubIcon, Icons.NetlifyIcon, Icons.ParcelIcon, Icons.VercelIcon],
+		skills: [Icons.GitIcon, Icons.GithubIcon, Icons.VercelIcon, Icons.GitlabIcon],
 	},
 	{
 		category: 'UI/UX',
@@ -38,7 +51,7 @@ export const skills = [
 	},
 ]
 
-export const projects = [
+export const projects: Project[] = [
 	{
 		title: 'Personal Portfolio',
 		description:
@@ -81,7 +94,7 @@ export const projects = [
 	},
 ]
 
-export const extensions = [
+export const extensions: Project[] = [
 	{
 		title: 'Fontsy',
 		description: 'A simple extension to control editor and terminal font sizes, weight and ligatures',
