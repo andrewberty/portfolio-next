@@ -3,6 +3,8 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import ProgressBar from '@/src/components/common/ProgressBar'
 import ReactLenis from 'lenis/react'
+import Cursor from '@/src/components/common/Cursor'
+import { CursorProvider } from '../utils/hooks/useCursor'
 
 export async function generateMetadata() {
 	return {
@@ -55,7 +57,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<div className='grain pointer-events-none' />
 					{/* <Navbar /> */}
 					<ProgressBar />
-					{children}
+					<CursorProvider>
+						<Cursor />
+						{children}
+					</CursorProvider>
 				</ReactLenis>
 			</body>
 		</html>
