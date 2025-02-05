@@ -1,50 +1,56 @@
 'use client'
 
-import { motion } from 'motion/react'
 import { FaAt, FaGithub, FaLinkedin } from 'react-icons/fa'
-import RevealContainer from '@/src/utils/reveal/RevealContainer'
-import { revealFromBottom } from '@/src/utils/reveal/revealVariations'
 import Link from 'next/link'
 import { FaArrowUp } from 'react-icons/fa'
 import SectionTitle from '@/src/components/common/SectionTitle'
 import Logo from '@/src/components/common/Logo'
 
+import useCursor from '@/src/utils/hooks/useCursor'
+
 const contact = [
 	{
 		href: 'https://github.com/andrewberty',
+		label: 'andrewberty',
 		icon: <FaGithub />,
 	},
 	{
 		href: 'https://www.linkedin.com/in/andrew-berty',
+		label: 'andrew-berty',
 		icon: <FaLinkedin />,
 	},
 	{
 		href: 'mailto:andrewgeorgeberty@gmail.com',
+		label: 'andrewgeorgeberty@gmail.com',
 		icon: <FaAt />,
 	},
 ]
 function Footer({ showContact = true }: { showContact?: boolean }) {
+	const { setText } = useCursor()
+
 	return (
 		<div>
 			{showContact && (
 				<section id='contact'>
 					<SectionTitle>contact</SectionTitle>
 
-					<RevealContainer className='flex justify-around items-center my-20'>
-						{contact.map(({ href, icon }, index) => {
+					<div className='flex justify-around items-center my-20'>
+						{contact.map(({ href, icon, label }, index) => {
 							return (
-								<motion.div variants={revealFromBottom} key={index}>
+								<div key={index}>
 									<Link
 										className='flex flex-col justify-center items-center'
+										onMouseOver={() => setText(label)}
+										onMouseOut={() => setText('')}
 										href={href}
 										target='_blank'
 										rel='noopener noreferrer'>
 										<div className='text-7xl transition-all opacity-80 hover:opacity-100'>{icon}</div>
 									</Link>
-								</motion.div>
+								</div>
 							)
 						})}
-					</RevealContainer>
+					</div>
 				</section>
 			)}
 
@@ -52,6 +58,8 @@ function Footer({ showContact = true }: { showContact?: boolean }) {
 				<FaArrowUp
 					className='text-2xl cursor-pointer opacity-80 transition-all hover:opacity-100'
 					onClick={() => window.scrollTo(0, 0)}
+					onMouseOver={() => setText('back to top')}
+					onMouseOut={() => setText('')}
 				/>
 				<Link
 					href='https://github.com/andrew-george'
