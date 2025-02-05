@@ -37,7 +37,7 @@ function Projects() {
 			},
 		})
 
-		tl.fromTo('.title', { scale: 20, opacity: 1, rotate: 10 }, { scale: 2, opacity: 0.3, rotate: 0 })
+		tl.to('.projects-container .title', { scale: 2, opacity: 0.3, rotate: 0 })
 	})
 
 	return (
@@ -53,12 +53,6 @@ function Projects() {
 				</div>
 			</div>
 
-			{/* <SectionTitle>OSS Contributions</SectionTitle> */}
-			{/* {extensions.map((extension, i) => ( */}
-			{/* 	<ProjectItem project={extension} key={i} /> */}
-			{/* ))} */}
-			{/**/}
-			{/* <SectionTitle>blog posts</SectionTitle> */}
 			{/* <BlogPosts /> */}
 		</section>
 	)

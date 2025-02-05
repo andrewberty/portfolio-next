@@ -21,7 +21,7 @@ export default function Skills() {
 					scrub: true,
 				},
 			})
-			.fromTo('#skills > .title', { scale: 20, opacity: 1, rotate: 10 }, { scale: 2, opacity: 0.3, rotate: 0 })
+			.to('#skills > .title', { scale: 2, opacity: 0.3, rotate: 0 })
 
 		skills.forEach((_, index) => {
 			const sectionSelector = '#skills-section-' + (index + 1)
@@ -56,7 +56,9 @@ export default function Skills() {
 
 	return (
 		<section id='skills' className='relative'>
-			<SectionTitle className='title sticky top-0 z-20 mix-blend-difference'>skills</SectionTitle>
+			<SectionTitle className='title sticky top-0 z-20 mix-blend-difference scale-[20] rotate-[10deg]'>
+				skills
+			</SectionTitle>
 
 			<div className='relative z-10'>
 				{skills.map((skill, index) => (
@@ -72,8 +74,8 @@ export default function Skills() {
 							</h4>
 						</div>
 
-						<div className='flex items-center relative z-10'>
-							<div className='left-skills'>
+						<div className='flex items-center'>
+							<div className='left-skills relative z-10'>
 								{skill.skills.map((skill, index) => {
 									if (index % 2 === 0) return
 									return <Skill skill={skill} key={index} />

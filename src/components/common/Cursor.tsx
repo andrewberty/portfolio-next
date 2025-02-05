@@ -3,6 +3,7 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import useCursor from '@/src/utils/hooks/useCursor'
+import { cn } from '@/src/utils/cn'
 
 export default function Cursor() {
 	const cursorSize = 35
@@ -12,8 +13,6 @@ export default function Cursor() {
 	useGSAP(
 		(context, _) => {
 			if (text) {
-				gsap.fromTo('.cursor-text', { opacity: 0 }, { opacity: 1, duration: 0.2, ease: 'power3.out' })
-
 				gsap.to('.cursor', {
 					backgroundColor: '#f97316',
 					width: 'max-content',
@@ -34,20 +33,10 @@ export default function Cursor() {
 			onComplete: () => window.addEventListener('mousemove', followCursor),
 		})
 
-		tl.set('.cursor', {
-			scale: 100,
-			x: '50vw',
-			y: '50vh',
-			opacity: 1,
-			border: '1px solid #f97316',
-			borderRadius: '9999px%',
-			backgroundColor: '#f97316',
-			backdropFilter: 'blur(5px)',
-		})
 		tl.to('.cursor', { scale: 2, duration: 3, ease: 'power3.out' })
 		tl.to('.cursor', {
 			backgroundColor: 'transparent',
-			scale: 1,
+			scale: 0,
 			duration: 1,
 			ease: 'power3.inOut',
 		})
@@ -56,6 +45,8 @@ export default function Cursor() {
 			yTo = gsap.quickTo('.cursor', 'y', { duration: 0.5, ease: 'power3' })
 
 		const followCursor = contextSafe!((e: MouseEvent) => {
+			gsap.to('.cursor', { scale: 1, duration: 0, ease: 'power3.in' })
+
 			xTo(e.clientX - cursorSize / 2)
 			yTo(e.clientY - cursorSize / 1.5)
 		})
@@ -65,9 +56,14 @@ export default function Cursor() {
 
 	return (
 		<div
-			className='cursor hidden lg:block fixed z-[1000] pointer-events-none'
+			className='cursor hidden lg:block fixed z-[1000] pointer-events-none scale-[100] translate-x-[50vw] translate-y-[50vh] border border-orange-500 rounded-full bg-orange-500 backdrop-blur-sm'
 			style={{ height: cursorSize, width: cursorSize }}>
-			<span className='cursor-text text-sm whitespace-nowrap'>{text}</span>
+			<span
+				className={cn('cursor-text text-sm whitespace-nowrap transition-opacity ease-in-out', {
+					'opacity-0': !text,
+				})}>
+				{text}
+			</span>
 		</div>
 	)
 }
