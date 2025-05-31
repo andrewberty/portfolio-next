@@ -25,7 +25,7 @@ function SingleBlogPost({ post }: { post: Blogpost }) {
 					{tag_list.map((tag: string, index: number) => (
 						<p
 							key={index}
-							className='px-2 py-1 capitalize backdrop-blur rounded bg-gradient-to-r from-purple-900 to-purple-600'>
+							className='px-2 py-1 capitalize backdrop-blur-sm rounded-sm bg-linear-to-r from-purple-900 to-purple-600'>
 							{tag}
 						</p>
 					))}

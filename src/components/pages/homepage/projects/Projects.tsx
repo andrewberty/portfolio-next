@@ -77,7 +77,7 @@ function ProjectItem({ project, className }: { project: Project; className?: str
 
 				<ProjectButtons repoLink={repoLink} liveLink={liveLink} marketplace={marketplace} />
 			</div>
-			<motion.div className='relative w-[90vw] lg:w-[50vw] aspect-[3/2] lg:before:back-gradient lg:before:hover:opacity-15'>
+			<motion.div className='relative w-[90vw] lg:w-[50vw] aspect-3/2 lg:before:back-gradient lg:hover:before:opacity-15'>
 				<Image src={demo} alt={title} fill className='object-contain py-6 lg:py-12' />
 			</motion.div>
 		</div>

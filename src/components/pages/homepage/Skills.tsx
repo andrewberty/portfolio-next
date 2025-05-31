@@ -56,7 +56,7 @@ export default function Skills() {
 
 	return (
 		<section id='skills' className='relative'>
-			<SectionTitle className='title sticky top-0 z-20 mix-blend-difference scale-[20] rotate-[10deg]'>
+			<SectionTitle className='title sticky top-0 z-20 mix-blend-difference scale-[20] rotate-10'>
 				skills
 			</SectionTitle>
 
@@ -67,7 +67,7 @@ export default function Skills() {
 						id={`skills-section-${index + 1}`}
 						className='skills-section py-40 relative flex flex-col justify-center items-center'>
 						<div className='absolute mx-auto title w-4/5'>
-							<h4 className='text-[10vw] font-thin uppercase relative after:absolute after:inset-0 after:bg-gradient-to-t after:from-black after:to-60% flex justify-between w-full'>
+							<h4 className='text-[10vw] font-thin uppercase relative after:absolute after:inset-0 after:bg-linear-to-t after:from-black after:to-60% flex justify-between w-full'>
 								{skill.category.split('').map((letter, i) => (
 									<span key={i}>{letter}</span>
 								))}

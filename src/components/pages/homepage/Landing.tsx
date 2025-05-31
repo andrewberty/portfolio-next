@@ -76,7 +76,7 @@ function Landing() {
 							<span
 								key={index}
 								className={cn('word', 'mr-3 text-orange-500 text-center transition-[filter] duration-500', {
-									'font-thin blur-sm lg:blur-md': !isActiveSplit,
+									'font-thin blur-xs lg:blur-md': !isActiveSplit,
 									'font-medium blur-0': isActiveSplit,
 								})}>
 								{word}
