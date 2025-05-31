@@ -2,7 +2,7 @@
 import { Blogpost } from '@/types'
 import { useEffect, useState } from 'react'
 import RevealContainer from '@/src/utils/reveal/RevealContainer'
-import SingleBlogPost from '@/src/components/pages/homepage/projects/SingleBlogPost'
+import SingleBlogPost from '@/src/components/pages/homepage/projects/single-blog-post'
 
 function BlogPosts() {
 	const [blogposts, setBlogposts] = useState([])

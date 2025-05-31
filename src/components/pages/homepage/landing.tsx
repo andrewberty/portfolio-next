@@ -41,15 +41,15 @@ function Landing() {
 				})
 				.from('.word', { y: '100%', opacity: 0, stagger: 0.1 })
 
-			gsap
-				.timeline({
-					scrollTrigger: {
-						trigger: headerRef.current,
-						start: 'top top',
-						scrub: true,
-					},
-				})
-				.to(headerRef.current, { rotate: -20, filter: 'blur(12px)', opacity: 0, scale: 0.2 })
+			// gsap
+			// .timeline({
+			// 	scrollTrigger: {
+			// 		trigger: headerRef.current,
+			// 		start: 'top top',
+			// 		scrub: true,
+			// 	},
+			// })
+			// .to(headerRef.current, { rotate: -20, filter: 'blur(12px)', opacity: 0, scale: 0.2 })
 		},
 		{ scope: headerRef },
 	)

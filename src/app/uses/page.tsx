@@ -1,7 +1,10 @@
+import ClientLayout from '@/src/app/layout.client'
 import Uses from '@/src/components/pages/uses/Uses'
 
-function UsesPage() {
-	return <Uses />
+export default function UsesPage() {
+	return (
+		<ClientLayout>
+			<Uses />
+		</ClientLayout>
+	)
 }
-
-export default UsesPage

@@ -1,9 +1,6 @@
 import './globals.css'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import ProgressBar from '@/src/components/common/ProgressBar'
-import Cursor from '@/src/components/common/Cursor'
-import { CursorProvider } from '../utils/hooks/useCursor'
 
 export async function generateMetadata() {
 	return {
@@ -51,17 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<meta name='msapplication-TileColor' content='#da532c' />
 				<meta name='theme-color' content='#ffffff' />
 			</head>
-			<body>
-				<div className='grain pointer-events-none' />
-				{/* <Navbar /> */}
-				<ProgressBar />
-				<CursorProvider>
-					<Cursor />
-					<div id='smooth-wrapper'>
-						<div id='smooth-content'>{children}</div>
-					</div>
-				</CursorProvider>
-			</body>
+			<body>{children}</body>
 		</html>
 	)
 }

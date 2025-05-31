@@ -2,11 +2,11 @@
 
 import Image, { StaticImageData } from 'next/image'
 import { skills } from '@/src/data/data'
-import SectionTitle from '../../common/SectionTitle'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
-import useCursor from '@/src/utils/hooks/useCursor'
+import useCursor from '@/src/utils/hooks/use-cursor'
+import SectionTitle from '@/src/components/common/section-title'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -56,9 +56,7 @@ export default function Skills() {
 
 	return (
 		<section id='skills' className='relative'>
-			<SectionTitle className='title sticky top-0 z-20 mix-blend-difference scale-[20] rotate-10'>
-				skills
-			</SectionTitle>
+			<SectionTitle className='title sticky top-0 z-20 mix-blend-difference scale-[20] rotate-10'>skills</SectionTitle>
 
 			<div className='relative z-10'>
 				{skills.map((skill, index) => (

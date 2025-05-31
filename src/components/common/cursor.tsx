@@ -2,7 +2,7 @@
 
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import useCursor from '@/src/utils/hooks/useCursor'
+import useCursor from '@/src/utils/hooks/use-cursor'
 import { cn } from '@/src/utils/cn'
 
 export default function Cursor() {
@@ -56,7 +56,7 @@ export default function Cursor() {
 
 	return (
 		<div
-			className='cursor hidden lg:block fixed z-1000 pointer-events-none scale-[100] translate-x-[50vw] translate-y-[50vh] border border-orange-500 rounded-full bg-orange-500 backdrop-blur-xs'
+			className='cursor hidden lg:block fixed z-1000 pointer-events-none scale-[100] translate-x-[50vw] translate-y-[50vh] border border-orange-500 rounded-full bg-orange-500'
 			style={{ height: cursorSize, width: cursorSize }}>
 			<span
 				className={cn('cursor-text text-sm whitespace-nowrap transition-opacity ease-in-out', {

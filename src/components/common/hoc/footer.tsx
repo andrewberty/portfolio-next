@@ -3,10 +3,10 @@
 import { FaAt, FaGithub, FaLinkedin } from 'react-icons/fa'
 import Link from 'next/link'
 import { FaArrowUp } from 'react-icons/fa'
-import SectionTitle from '@/src/components/common/SectionTitle'
-import Logo from '@/src/components/common/Logo'
+import SectionTitle from '@/src/components/common/section-title'
+import Logo from '@/src/components/common/logo'
 
-import useCursor from '@/src/utils/hooks/useCursor'
+import useCursor from '@/src/utils/hooks/use-cursor'
 
 const contact = [
 	{

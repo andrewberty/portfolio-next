@@ -1,18 +1,18 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-*: initial;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-dmserif);
+	--font-*: initial;
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+	--font-serif: var(--font-dmserif);
 
-  --animate-border-spin: border-spin 7s linear infinite;
+	--animate-border-spin: border-spin 7s linear infinite;
 
-  @keyframes border-spin {
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
+	@keyframes border-spin {
+		100% {
+			transform: rotate(-360deg);
+		}
+	}
 }
 
 /*
@@ -24,25 +24,25 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
 }
 
 @utility back-gradient {
-  background: linear-gradient(90deg, #fb923c 0%, #fb5822);
-  /* background: linear-gradient(90deg, #c41c76 0%, #4f0c97); */
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  filter: blur(100px);
-  transition: all 0.2s ease-in-out;
-  opacity: 5%;
+	background: linear-gradient(90deg, #fb923c 0%, #fb5822);
+	/* background: linear-gradient(90deg, #c41c76 0%, #4f0c97); */
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	filter: blur(100px);
+	transition: all 0.2s ease-in-out;
+	opacity: 5%;
 }
 
 :root {
@@ -120,10 +120,6 @@ body::-webkit-scrollbar-thumb {
 	100% {
 		transform: translate(-15%, -20%);
 	}
-}
-
-nav {
-	@apply fixed w-max flex gap-8 px-6 py-4 bg-zinc-950 border border-zinc-600/20 rounded-3xl items-center backdrop-blur-sm top-8 left-1/2 -translate-x-1/2 z-50 font-mono text-sm;
 }
 
 @property --rotate {
